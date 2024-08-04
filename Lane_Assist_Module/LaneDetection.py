@@ -14,13 +14,15 @@ def getLaneCurve(img, display=2):
     imgThreshold = utlis.thresholding(img)
 
     # Step 2
-    hT, wT, c = img.shape
+    hT, wT, c = img.shape   # height, width , no.of.channels
     points = utlis.valTrackbars()
     imgWarp = utlis.warpImg(imgThreshold, points, wT, hT)
-    imgWarpPoints = utlis.drawpoints(imgcopy, points)
+    imgWarpPoints = utlis.drawpoints(imgcopy, points) # applies the points to copy of img
 
     # Step 3
+    # This middle point serves as a reference for determining the position of the vehicle relative to the center of the lane.
     middlePoint, imgHist = utlis.getHistogram(imgWarp, display=True, minPer=0.5, region=4)
+    # curvature of the lane
     curveAveragePoint, imgHist = utlis.getHistogram(imgWarp, display=True, minPer=0.9)
     curveRaw = curveAveragePoint - middlePoint
 

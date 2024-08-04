@@ -1,7 +1,6 @@
 import cv2
 
-# Specify the device index for the USB camera (usually starts from 0)
-# If you have multiple USB cameras, adjust the index accordingly
+# device index for the USB camera (index: 0)
 cap = cv2.VideoCapture(0)
 
 def getImg(display=False, size=[480, 240]):
