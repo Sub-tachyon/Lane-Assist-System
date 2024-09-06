@@ -1,4 +1,4 @@
-# Smart Lane Detection 🚗 and Color Picker 🔵🔴🟢
+# Smart Lane Detection 🚗 and Color Picker 🔴🟡🟢
 
 ## Overview
 
